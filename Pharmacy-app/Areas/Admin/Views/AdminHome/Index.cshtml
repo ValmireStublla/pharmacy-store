@@ -1,0 +1,84 @@
+﻿<head>
+    <style>
+        .boxDashboard {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+            .boxDashboard .box {
+                margin-right: 20px;
+                max-width: 30%; 
+                text-align: center;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+        .wlcadmin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .box p {
+            color: lightblue;
+            font-weight: 700;
+        }
+
+        .box .imgofbox img {
+            min-width: 150px; 
+            height: auto; 
+            max-height: 150px; 
+        }
+
+        .developedBy {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wlcadmin">
+        <h1>Welcome to the Dashboard</h1>
+        <h3>Explore the following sections to manage your store efficiently. </h3>
+    </div>
+
+    <div class="boxDashboard">
+
+        <div class="box">
+            <p>1. Medicaments</p>
+            <div class='imgofbox'>
+                <img src='~/images/products-icon.png' alt="" />
+            </div>
+            <p>Update your store by managing products.</p>
+        </div>
+
+        <div class="box">
+            <p>2. FAQ</p>
+            <div class='imgofbox'>
+                <img src='~/images/accordion-lines-icon.png' alt="" />
+            </div>
+            <p>Review your Accordion to keep your users well informed. </p>
+        </div>
+
+        <div class="box">
+            <p>3. Staff</p>
+            <div class='imgofbox'>
+                <img src='~/images/subscriber-icon.png' alt="" />
+            </div>
+            <p>Ensure the trust of users by effectively overseeing your staff. </p>
+        </div>
+    </div>
+
+    <div class='developedBy'>
+        <p>Developed by</p>
+        <p>Gentë Krasniqi & Valmire Stublla</p>
+        <p>UBT - Prishtinë</p>
+    </div>
+
+</body>

@@ -1,0 +1,36 @@
+﻿@model Pharmacy_app.Areas.Admin.Models.Pharmacists
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br />
+            <h3 class="text-center">Details for @Html.DisplayFor(model => model.Name)</h3>
+            <br />
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Pharmacist Information</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4">Name:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Name)</dd>
+                        <dt class="col-sm-4">Degree:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Degree)</dd>
+                        <dt class="col-sm-4">Years of Experience:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.YearsOfExperience)</dd>
+                        <dt class="col-sm-4">Profile Picture:</dt>
+                        <dd class="col-sm-8">
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.ProfilePicture)" alt="Profile Picture" class="img-thumbnail" />
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="pharmacists" class="btn btn-outline-info">Back to List</a>
+</div>

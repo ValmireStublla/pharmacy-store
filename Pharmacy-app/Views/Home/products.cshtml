@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Pharmacy_app.Areas.Admin.Models.Medicament>
+
+@{
+    ViewData["Title"] = "Products";
+}
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<br />
+<div class="wlcadmin">
+    <h1 class="text-body-secondary">Find your Medicament Here </h1>
+</div>
+<br />
+<div class="medicament-holder">
+
+    @foreach (var item in Model)
+    {
+        <div class="card mb-3" style="align-items:center;margin-top:30px;min-height:350px;width:340px">
+            <a href="@Url.Action("DetailsMedicament", "Home", new {id = item.ID})" style="text-decoration:none;margin-top:20px">
+                <h3 class="card-header" style="background-color:white"> @Html.DisplayFor(modelItem => item.Title)</h3>
+                <div class="card-body">
+                    <h6 class="card-subtitle text-muted">Pharm Store Certified Product</h6>
+                </div>
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Photo)" alt="Image" style="width:110px;height:130px" />
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cmimi: @Html.DisplayFor(modelItem => item.Price) €</li>
+                </ul>
+                <h6 class="card-subtitle text-muted" style="margin-top:20px;font-weight:1000">Shiko Detajet</h6>
+            </a>
+        </div>
+    }
+</div>

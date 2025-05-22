@@ -1,0 +1,51 @@
+﻿@model Pharmacy_app.Areas.Admin.Models.Medicament
+
+@{
+    ViewData["Title"] = Html.DisplayFor(model => model.Title);
+}
+<br />
+<h1>
+    Detajet e
+    @Html.DisplayFor(model => model.Title)
+</h1>
+<br />
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Foto e Produktit
+        </dt>
+        <dd class="col-sm-10">
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Photo)" alt="Image" style="width:120px;height:100px" />
+        </dd>
+        <dt class="col-sm-2">
+            Data e Skadences
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataSkadences)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID" class="btn btn-outline-warning">Edit</a> |
+    <a asp-action="Index" class="btn btn-outline-info">Back to List</a>
+</div>

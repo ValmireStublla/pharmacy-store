@@ -1,0 +1,49 @@
+/* _content/Pharmacy-app/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-qgvfwb84lu] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-qgvfwb84lu] {
+  color: #0077cc;
+}
+
+.btn-primary[b-qgvfwb84lu] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-qgvfwb84lu], .nav-pills .show > .nav-link[b-qgvfwb84lu] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-qgvfwb84lu] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-qgvfwb84lu] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-qgvfwb84lu] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-qgvfwb84lu] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-qgvfwb84lu] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

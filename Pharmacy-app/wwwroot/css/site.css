@@ -1,0 +1,286 @@
+.mainContent {
+    margin-top: 130px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-bottom: 80px;
+}
+
+    .mainContent .mainImage {
+        width: 50%;
+    }
+
+.mainImage img {
+    max-width: 100%;
+    padding-left: 50px;
+    height: 450px;
+    object-fit: contain;
+}
+
+.mainText {
+    width: 40%;
+    margin-left: 100px;
+}
+
+    .mainText h3 {
+        color: rgb(0, 60, 128);
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+button {
+    border-radius: 10%;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    font-weight: bold;
+    background-color: #A1D8DF;
+    border-style: none;
+    font-size: 16px;
+}
+
+    button:hover {
+        color: rgb(0, 60, 128);
+        font-weight: bold;
+        transition: 0.6s ease-in-out;
+        cursor: pointer;
+    }
+
+.employee {
+    width: 33.33%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.employeeImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.employeeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.employeeName {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.employeeTitle {
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+.employeeContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+    .employeeContainer h3 {
+        color: #fb7061;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(237, 221, 218, 0.938);
+        animation: fadeIn 3s ease;
+    }
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+
+.representations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+    .representations .imgBox {
+        width: 150px;
+        object-fit: contain;
+        height: 150px;
+    }
+
+        .representations .imgBox:hover {
+            filter: grayscale(0%);
+            cursor: pointer;
+            transition: ease-in-out 0.5s;
+        }
+
+
+.holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    .holder img {
+        width: 100%;
+        object-fit: fill;
+        height: 100%;
+    }
+
+    .holder h3 {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 34px;
+        color: rgb(0, 128, 49);
+    }
+
+    .holder h2 {
+        text-align: center;
+    }
+.imgSection {
+    max-width:200px;
+}
+
+.medicament-holder{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.holderDashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.representations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+    .representations .imgBox {
+        width: 150px;
+        object-fit: contain;
+        height: 150px;
+    }
+
+
+.holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    .holder img {
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .holder h3 {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 30px;
+        color: #56CC9D;
+    }
+
+    .holder h2 {
+        text-align: center;
+    }
+
+figure {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.medicament-holder {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.wlcadmin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.medicament-holder {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+    .medicament-holder .card a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.table-info th a {
+    color: white;
+}
+
+
+.phamtext {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px 40px 0px;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapperdashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.holderDashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

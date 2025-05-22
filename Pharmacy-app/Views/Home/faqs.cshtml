@@ -1,0 +1,25 @@
+﻿@model List<Pharmacy_app.Areas.Admin.Models.Faq>
+
+@{
+    ViewData["Title"] = "FAQs";
+}
+
+<h1 class="text-center mb-4">@ViewData["Title"]</h1>
+
+<div class="accordion" id="faqAccordion">
+    @foreach (var faq in Model)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading@(faq.ID)">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse@(faq.ID)" aria-expanded="true" aria-controls="collapse@(faq.ID)">
+                    @faq.Question
+                </button>
+            </h2>
+            <div id="collapse@(faq.ID)" class="accordion-collapse collapse" aria-labelledby="heading@(faq.ID)" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    @faq.Answer
+                </div>
+            </div>
+        </div>
+    }
+</div>

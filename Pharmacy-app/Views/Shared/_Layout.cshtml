@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Pharm Store</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/mycss.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    @*<link rel="stylesheet" href="~/Pharmacy_app.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pharm Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav mx-auto d-flex justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Faqs">Faq</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Pharmacists">Our Staff</a>
+                        </li>
+                         @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link active" asp-area="Admin" asp-controller="AdminHome" asp-action="Index">Dashboard</a>
+                            </li>
+                        }
+                    </ul>
+                    <partial name="_LoginPartial"/>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3" >
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mt-md-5">
+                    <h5>Contact Us</h5>
+                    <p>Email: Pharmacy@info.com</p>
+                    <p>Phone: +123-456-7890</p>
+                </div>
+                <div class="col-md-4 mt-md-5">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/Home/About">About us</a></li>
+                        <li><a href="/Home/Products">Products</a></li>
+                        <li><a href="/Home/Pharmacists">Pharmacists</a></li>
+                        <li><a href="/Home/Team">Team</a></li>
+                </div>
+                <div class="col-md-4 mt-md-5">
+                    <h5>About Us</h5>
+                    <p>Thank you for choosing out Pharm Store as your trusted source for quality healthcare products. We are honored to be part of your journey toward better health.</p>
+                    <p>Address: 123 Pharmacy Street, Prishtinë, Kosovë</p>
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <p class="text-center">Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and <a href="#">Instagram</a> for the latest updates.</p>
+        </div>
+        <hr class="my-0">
+        <div class="container text-center my-4">
+            <p>&copy; @DateTime.Now.Year Pharmacy Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        var accordion = new bootstrap.Collapse(document.getElementById('faqAccordion'), {
+            toggle: false // This will prevent multiple items from being open at once
+        });
+    </script>
+</body>
+</html>
